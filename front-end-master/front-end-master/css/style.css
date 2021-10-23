@@ -1,0 +1,154 @@
+/* CSS style rules for navbar and sidebar for all files */
+* {
+	box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+	font-family: GrenzeGotisch;
+	src: url("../fonts/GrenzeGotisch-VariableFont_wght.ttf");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: Slabo;
+	src: url("../fonts/Slabo27px-Regular.ttf");
+}
+
+@font-face {
+	font-family: NotoSerif;
+	src: url("../fonts/NotoSerif-Regular.ttf");
+}
+
+@font-face {
+	font-family: TurretRoad;
+	src: url("../fonts/TurretRoad-ExtraBold.ttf");
+}
+
+@font-face {
+	font-family: Bitter;
+	src: url("../fonts/Bitter-VariableFont_wght.ttf");
+}
+
+
+body {
+	background-color: #e3f2fd;
+	font-family: NotoSerif;
+}
+
+/* Style for footer */
+footer {
+	margin-bottom: 20px;
+}
+
+footer a {
+	color: #025f80;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+
+
+/* Style for Sidebar*/
+.sidenav{
+    z-index: 1000;
+}
+#mySidenav a{
+    position: fixed;
+    left: -155px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 180px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+#mySidenav a:hover {
+    left: 0;
+}
+
+
+#first {
+    top: 80px;
+    background-color: #0497CC;
+    z-index: 1000;
+}
+
+#second {
+    top: 150px;
+    background-color: #307A95;
+    z-index: 1000;
+}
+
+#third {
+    top: 220px;
+    background-color: #025F80;
+    z-index: 1000;
+}
+
+#fourth {
+    top: 290px;
+    background-color: #41A7CC;
+    z-index: 1000;
+}
+
+#fifth {
+    top: 360px;
+    background-color: #02394D;
+    z-index: 1000;
+}
+
+
+
+@media (max-width: 767px) {
+    /* hide sidebar in small view */
+    .sidenav {
+        display: none;
+    }
+    /* hide footer in small view */
+    footer {
+        display: none;
+    }
+    /* show bottom menu in small view */
+    div.bottom-menu {
+        display: block;
+    }
+}
+
+/* hide bottom menu in a larger window */
+.bottom-menu {
+    display: none;
+}
+
+.nav-icons {
+    width: 100%;
+    background-color: #025f80;
+    height: 55px;
+}
+
+.icon {
+    width: 20%;
+    font-size: 200%;
+    color: #c3d6e7
+}
+
+.active-button {
+    background-color: #307a95;
+    cursor: default;
+}
+
+.nav-icons a {
+    color: #c3d6e7;
+}
+
+.nav-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.error {
+    display: none;
+    color: red;
+    font-style: italic;
+}

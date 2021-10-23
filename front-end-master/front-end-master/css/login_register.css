@@ -1,0 +1,44 @@
+/* CSS style for login.html and register.html */
+.wrapper {
+	width: 60%;
+	background-color: white;
+	height: 100%;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+}
+
+.form-wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.sm-link {
+	display: none;
+}
+
+@media (max-width: 991px) {
+	.fname {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.lg-link {
+		display: none;
+	}
+	.lg-link-text {
+		margin-bottom: 0;
+	}
+	.sm-link {
+		display: block;
+	}
+}
+
+
+#password-note {
+	margin-top: 10px;
+	padding: 3px;
+	margin-bottom: 0;
+}

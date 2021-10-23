@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" href="images/favicons/budget.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/weather.css">
+    <link rel="stylesheet" type="text/css" href="css/budget.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    
+    
+    </script>
+    <script type="text/javascript" src="js/budget-google-chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light fixed-top" style="background-color: #025f80;">
+        <a href="timeline.html" class="navbar-brand d-flex flex-row justify-content-start" style="font-family: GrenzeGotisch; padding: 0; font-size:27px; color: #c3d6e7; margin-right: 10px;">
+            <img src="images/timeline.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy" style="margin-right: 10px;">
+            ShowTime
+        </a>
+        <!--Weather API -->
+  	    <div class="d-flex flex-row justify-content-start weather navbar-nav mr-auto">
+  	    	<p class="text-light text-center"><i class="fas fa-cloud-sun"></i><span id="hohoho"></span></p>
+  	    	<p class="text-light text-center"><i class="fas fa-temperature-low"></i><span id="hehehe"></span></p>
+  	    	<p class="text-light text-center"><i class="far fa-compass"></i><span id="reroro"></span></p>
+  	    </div>
+        <div class="dropdown">
+            <img src="images/account.png" width="40" height="40" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                <a href="account_page.html" class="dropdown-item" type="button">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path fill-rule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    My Account
+                </a>
+                <a href="#" class="dropdown-item" type="button">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pie-chart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>
+                    </svg>
+                    Budget Tracker
+                </a>
+                <a href="#" class="dropdown-item" type="button">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg>
+                    Log Out
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--floating hoverable side navigation bar-->
+    <div id="mySidenav" class="sidenav">
+        <a href="timeline.html" id="first">Timeline</a>
+        <a href="create_diary.html" id="second">+Diary</a>
+        <a href="create_event.html" id="third">+Event</a>
+        <a href="create_reminder.html" id="fourth">+Reminder</a>
+        <a href="create_transaction.html" id="fifth">+Transaction</a>
+    </div>
+
+    <div style="height: 55px;"></div>
+    <div id="chart_wrap">
+        <div id="chart_div"></div>
+    </div>
+
+    <hr class="bg-info line">
+    
+    <div id="transactions">
+        <h2>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-receipt-cutoff" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v13h-1V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51L2 2.118V15H1V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zM0 15.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                <path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-8a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            Transactions
+        </h2>
+        <!-- BK: only one table-responsive is needed -->
+        <div class="table-responsive">
+            <table class="table text-center table-striped table-hover" style="word-wrap: break-word;">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 5%;">No.</th>
+                        <th scope="col" style="width: 75%;">Items</th>
+                        <th scope="col" style="width: 5%;">Amount</th>
+                        <th scope="col" style="width: 15%;">Time</th>
+                    </tr>
+                </thead>
+                <tbody id="budget-table-data">
+                    <tr v-for="budItem in budItems">
+                        <th scope="row">{{budItem.count}}</th>
+                        <td>{{budItem.title}}</td>
+                        <td>{{budItem.amount}}</td>
+                        <td>{{budItem.start}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr class="bg-info line">
+
+    <button class="btn btn-info btn-lg" id="budget-show-more" type="button" style="width: 50%; margin-left: auto;margin-right: auto; margin-bottom: 15px; display: block;">Show More</button>
+
+    <div class="bottom-menu">
+        <div style="height: 55px;"></div>
+        <div class="nav-icons d-flex flex-row justify-content-center fixed-bottom text-center">
+            <a href="timeline.html" class="icon">
+            <i class="fas fa-sort-amount-down"></i>
+            </a>
+            <a href="create_diary.html" class="icon">
+            <i class="fas fa-feather-alt"></i>
+            </a>
+            <a href="create_event.html" class="icon">
+            <i class="far fa-calendar-plus"></i>
+            </a>
+            <a href="create_reminder.html" class="icon">
+            <i class="fas fa-tasks"></i>
+            </a>
+            <a href="create_transaction.html" class="icon">
+            <i class="fas fa-hand-holding-usd"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="text-center">
+            <a href="https://github.com/CSCI201-ShowTime" target="_blank"><i class="fab fa-github"></i> ShowTime</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script type="text/javascript" src="js/server/g-ready-userinfo.js"></script>
+    <script type="text/javascript" src="js/budget.js"></script>
+    <script src="js/weather.js"></script>
+    <script type="text/javascript" src="js/server/logout-server.js"></script>
+    <script type="text/javascript" src="js/server/logout-navbar-temp.js"></script>
+</body>
+</html>

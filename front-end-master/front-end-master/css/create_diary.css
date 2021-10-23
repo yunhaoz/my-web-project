@@ -1,0 +1,21 @@
+/* CSS style for create_diary.html */
+
+.diary-wrapper {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ebf4fa;
+	padding: 30px;
+}
+
+.diary-wrapper form {
+	margin-top: 20px;
+}
+
+@media(max-width: 767px) {
+	.diary-wrapper {
+		margin-top: 15px;
+	}
+}

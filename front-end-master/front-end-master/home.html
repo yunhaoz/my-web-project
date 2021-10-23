@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShowTime</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="images/favicons/timeline.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/weather.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-light fixed-top" style="background-color: #025f80;">
+      <a href="timeline.html" class="navbar-brand d-flex flex-row justify-content-start" style="font-family: GrenzeGotisch; padding: 0; font-size:27px; color: #c3d6e7; margin-right: 10px;">
+            <img src="images/timeline.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy" style="margin-right: 15px;" />
+            ShowTime
+        </a>
+        <!--Weather API -->
+  	    <div class="d-flex flex-row justify-content-start weather navbar-nav mr-auto">
+  	    	<p class="text-light text-center"><i class="fas fa-cloud-sun"></i><span id="hohoho"></span></p>
+  	    	<p class="text-light text-center"><i class="fas fa-temperature-low"></i><span id="hehehe"></span></p>
+  	    	<p class="text-light text-center"><i class="far fa-compass"></i><span id="reroro"></span></p>
+  	    </div>
+        <div class="dropdown">
+            <img src="images/account.png" width="40" height="40" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                <a href="register.html" class="dropdown-item" type="button">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
+                        />
+                    </svg>
+                    Sign Up
+                </a>
+                <a href="login.html" class="dropdown-item" type="button">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"
+                        />
+                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                    </svg>
+                    Log In
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div style="height: 55px;"></div>
+    <div class="jumbotron jumbotron-fluid header">
+        <div class="container" style="width: 100%; padding-left: 5%; padding-right: 5%;">
+            <div class="header-text">
+                <h1 class="display-4 subtitle">Calendar</h1>
+                <p class="lead">An Ever-Interesting Personal Calendar</p>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto">
+        <div class="container">
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-6 cols order-md-1 content">
+                    <div>
+                        <h2 class="subtitle">Timeline</h2>
+                        <p>The whole calendar is present in the form of a timeline, which can be divided by day/week/month</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-2 content">
+                    <div class="home-img">
+                        <img src="images/sub-timeline.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-6 cols order-md-2 content">
+                    <div>
+                        <h2 class="subtitle">Budget</h2>
+                        <p>You is able to track your transactions and your budget periodically. Authenticated users in the same group can request and repay money to each other.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 content">
+                    <div class="home-img">
+                        <img src="images/sub-budget.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-6 cols order-md-1 content">
+                    <div>
+                        <h2 class="subtitle">Diary</h2>
+                        <p>You can write down daily notes and diaries.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-2 content">
+                    <div class="home-img">
+                        <img src="images/sub-diary.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-6 cols order-md-2 content">
+                    <div>
+                        <h2 class="subtitle">To-Do List</h2>
+                        <p>You can set reminders and keep track of the miscellaneous deadlines.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1 content">
+                    <div class="home-img">
+                        <img src="images/sub-todo.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-6 cols order-md-1 content">
+                    <div>
+                        <h2 class="subtitle">More</h2>
+                        <p>You can see the weather of your location, and there will be guidance for you to use our calendar application...</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-2 content">
+                    <div class="home-img">
+                        <img src="images/sub-more.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div style="width: 50%; margin: auto;">
+            <a href="register.html" class="btn btn-outline-info btn-lg btn-block" style="margin-bottom: 10px;">Try Now</a>
+            <p class="lg-link-text" style="text-align: center;">Already have an account? <a href="login.html" class="text-info lg-link">Sign in here.</a></p>
+            <p class="sm-link" style="text-align: center;"><a href="login.html" class="text-info">Sign in here.</a></p>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="text-center">
+            <a href="https://github.com/CSCI201-ShowTime" target="_blank"><i class="fab fa-github"></i> ShowTime</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/weather.js"></script>
+
+    <!-- Bilibiliy (v0.2.6): Server-side Communication Script -->
+    <script type="text/javascript" src="js/server/logout-server.js"></script>
+    <!-- Bilibiliy (v0.2.6): This should be integrated into account_page.js -->
+    <script type="text/javascript" src="js/server/logout-navbar-temp.js"></script>
+</body>
+</html>

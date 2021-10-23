@@ -1,0 +1,67 @@
+/* CSS style for home.html */
+.subtitle {
+	font-family: TurretRoad;
+}
+
+.header {
+	background-image: url('../images/sub-calendar.jpg');
+	background-position: top center;
+	background-size: 100%;
+	background-color: #e3f2fd;
+	background-repeat: no-repeat;
+	font-weight: bolder;
+	margin:0;
+	height: 370px;
+	position: relative;
+}
+
+.home-img {
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.home-img img {
+	width: 60%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.sm-link {
+	display: none;
+}
+
+@media (max-width: 991px) {
+	.header {
+		background-image: url('../images/sm-sub-calendar.jpg');
+		background-size: 100%;
+	}
+	.header-text {
+		width: 100%;
+		padding-left: 5%;
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+}
+
+@media (max-width: 767px) {
+	.lg-link {
+		display: none;
+	}
+	.lg-link-text {
+		margin-bottom: 0;
+	}
+	.sm-link {
+		display: block;
+	}
+}

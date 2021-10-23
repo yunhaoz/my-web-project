@@ -1,0 +1,127 @@
+/* CSS style for accout_page.css */
+
+#change_profile{
+	display: none;
+}
+#change_password{
+	display: none;
+}
+input[type="file"]{
+	display:none;
+}
+
+
+#change-password {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#password-form {
+	background-color: white;
+	padding: 35px 20px 35px 20px;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#save {
+	display: none;
+}
+
+
+#file + label{
+	display: block;
+	text-align: center;
+	line-height: 150%;
+	font-size: .85em;
+	color:#025f80;
+	padding: 5px;
+	align-items: center;
+	/*padding-top: 20px;*/
+	dispay:flex;
+	justify-content: center;
+	/*margin: auto;*/
+	cursor: pointer;
+}
+.info-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+.file{
+	display:none;
+	text-align: center;
+	margin:auto;
+}
+.avatar {
+	margin: auto;
+	border: 5px solid white;
+	padding: 10px;
+	vertical-align: middle;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.img-container-block {
+	width:20px;
+	height:20px;
+	text-align: center;
+}
+.center-align{
+	margin: auto;
+	padding: auto;
+	text-align: center;
+	z-index: -100;
+}
+
+.title h1{
+	margin: 10px;
+	text-align: center;
+	font-family: "Bitter", "monospace";
+}
+
+
+.wrapper {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.group-block {
+	margin: 5px;
+	background-color: white;
+}
+
+.card-wrapper {
+	width: 90%;
+	margin: auto;
+	padding: 5px;
+}
+
+.group-block:hover {
+	background-color: lightgray;
+}
+
+.card-wrapper a {
+	width: 25%;
+	color: black;
+}
+
+.card-wrapper a:hover {
+	text-decoration: none;
+}
+
+@media (max-width: 767px) {
+	.wrapper {
+		width: 90%;
+	}
+}
